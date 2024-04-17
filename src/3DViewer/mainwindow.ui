@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1269</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+    
+	background-color: rgb(95, 95, 95);
+
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+    
+	background-color: rgb(95, 95, 95);
+}</string>
+   </property>
+   <widget class="MyOpenGLWidget" name="widget" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>851</width>
+      <height>600</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelModelTrans">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>90</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Translate</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTransX">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>140</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTransY">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>180</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTransZ">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>220</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelModelRotate">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>260</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Angle to Rotate(grad.)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotX">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>310</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotY">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>350</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelRotZ">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>390</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelModelScale">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>430</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Scale the model </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelScale">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>480</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Value</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFileName">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>530</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel
+{
+    font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>File name</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVertices">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>610</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Number of vertices</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelEdges">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>640</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Number of edges</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVertRes">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>610</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	background-color: rgb(222, 221, 218);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelEdgRes">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>640</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	background-color: rgb(222, 221, 218);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFileName_2">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>570</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>.AppleSystemUIFont</family>
+      <pointsize>8</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	background-color: rgb(222, 221, 218);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chooseModel">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>0</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Select a model</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerTransX">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>150</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numX">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>140</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerTransY">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>190</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerTransZ">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>230</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="value">
+     <number>-5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numY">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>180</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numZ">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>220</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="value">
+     <number>-5</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerRotatX">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>320</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="pageStep">
+     <number>20</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerRotatY">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>360</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="pageStep">
+     <number>20</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerRotatZ">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>400</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+    <property name="pageStep">
+     <number>20</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numRotX">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>310</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numRotY">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>350</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numRotZ">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>390</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-360</number>
+    </property>
+    <property name="maximum">
+     <number>360</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerScale">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>490</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-10</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numScale">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>480</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-10</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="chooseProjection">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>50</y>
+      <width>381</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Select type of projection</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>parallel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>central</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="resetSetting">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>670</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Reset settings</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chooseBackColor">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>530</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Select a back_colour</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="chooseLine">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>570</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Select type line</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>solid</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dotted</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="choosePoint">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>610</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Select type point</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>none</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>circle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>square</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="labelScale_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>680</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Value ribs</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerRibsValue">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>690</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numSizeR">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>680</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chooseVertexColor">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>650</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Select a color object</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelScale_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>640</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(255, 255, 255);
+     border: 1px solid grey;
+	background-color: rgba(0, 0, 0, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Value vertex</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sladerVertexValue">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>650</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>40</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numSizeV">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>640</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	background-color: rgb(222, 221, 218);
+font:8pt &quot;.AppleSystemUIFont&quot;;
+	color: rgb(0, 0, 0);
+     border: 1px solid grey;
+	
+}</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>40</number>
+    </property>
+   </widget>
+   <zorder>widget</zorder>
+   <zorder>labelTransX</zorder>
+   <zorder>labelTransY</zorder>
+   <zorder>labelTransZ</zorder>
+   <zorder>labelModelTrans</zorder>
+   <zorder>labelModelRotate</zorder>
+   <zorder>labelRotX</zorder>
+   <zorder>labelRotY</zorder>
+   <zorder>labelRotZ</zorder>
+   <zorder>labelModelScale</zorder>
+   <zorder>labelScale</zorder>
+   <zorder>labelFileName</zorder>
+   <zorder>labelVertices</zorder>
+   <zorder>labelEdges</zorder>
+   <zorder>labelVertRes</zorder>
+   <zorder>labelEdgRes</zorder>
+   <zorder>labelFileName_2</zorder>
+   <zorder>chooseModel</zorder>
+   <zorder>sladerTransX</zorder>
+   <zorder>numX</zorder>
+   <zorder>sladerTransY</zorder>
+   <zorder>sladerTransZ</zorder>
+   <zorder>numY</zorder>
+   <zorder>numZ</zorder>
+   <zorder>sladerRotatX</zorder>
+   <zorder>sladerRotatY</zorder>
+   <zorder>sladerRotatZ</zorder>
+   <zorder>numRotX</zorder>
+   <zorder>numRotY</zorder>
+   <zorder>numRotZ</zorder>
+   <zorder>sladerScale</zorder>
+   <zorder>numScale</zorder>
+   <zorder>chooseProjection</zorder>
+   <zorder>resetSetting</zorder>
+   <zorder>chooseBackColor</zorder>
+   <zorder>chooseLine</zorder>
+   <zorder>choosePoint</zorder>
+   <zorder>labelScale_2</zorder>
+   <zorder>sladerRibsValue</zorder>
+   <zorder>numSizeR</zorder>
+   <zorder>chooseVertexColor</zorder>
+   <zorder>labelScale_3</zorder>
+   <zorder>sladerVertexValue</zorder>
+   <zorder>numSizeV</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="actionSave">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyOpenGLWidget</class>
+   <extends>QWidget</extends>
+   <header>myopenglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
